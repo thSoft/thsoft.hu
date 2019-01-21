@@ -5,10 +5,10 @@
 			<name><hu>magyar</hu><en>Hungarian</en></name>
 			<defaultLanguage/>
 		</hu>
-		<en>
+<!--		<en>
 			<nativeName>English</nativeName>
 			<name><hu>angol</hu><en>English</en></name>
-		</en>
+		</en>-->
 	</languages>
 	<texts>
 		<title><hu>Harmath Dénes honlapja</hu><en>Homepage of Dénes Harmath</en></title>

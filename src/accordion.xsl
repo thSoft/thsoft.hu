@@ -6,7 +6,7 @@
 		<xsl:variable name="path">/<xsl:if test="not(@default)"><xsl:value-of select="nativeName"/></xsl:if></xsl:variable>
 
 		<!-- Accordion -->
-		<xsl:result-document href="public{$path}/accordion.html" method="html">
+		<xsl:result-document href="docs{$path}/accordion.html" method="html">
 			<html lang="{$lang}">
 				<head>
 					<meta charset="utf-8"/>

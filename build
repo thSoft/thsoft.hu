@@ -1,7 +1,8 @@
 echo "Building..."
-rm -rf public
-mkdir public
-cp -r static/* public
+OUTPUT=docs
+rm -rf $OUTPUT
+mkdir $OUTPUT
+cp -r static/* $OUTPUT
 saxon -xsl:src/menu.xsl -s:src/data.xml -o:temp
 rm temp
 echo "Done."

@@ -4,7 +4,7 @@
 	<xsl:template match="/data/languages/*">
 		<xsl:variable name="lang" select="name()"/>
 		<xsl:variable name="path">/<xsl:if test="not(defaultLanguage)"><xsl:value-of select="nativeName"/></xsl:if></xsl:variable>
-		<xsl:result-document href="public{$path}/menu.html" method="html" indent="no">
+		<xsl:result-document href="docs{$path}/index.html" method="html" indent="no">
 			<html lang="{$lang}">
 				<head>
 					<meta charset="utf-8"/>
