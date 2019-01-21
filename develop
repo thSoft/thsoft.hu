@@ -1,0 +1,2 @@
+./build
+fswatch src static | xargs -n1 ./build

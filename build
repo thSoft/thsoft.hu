@@ -1,0 +1,7 @@
+echo "Building..."
+rm -rf public
+mkdir public
+cp -r static/* public
+saxon -xsl:src/menu.xsl -s:src/data.xml -o:temp
+rm temp
+echo "Done."
