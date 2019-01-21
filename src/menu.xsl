@@ -5,6 +5,7 @@
 		<xsl:variable name="lang" select="name()"/>
 		<xsl:variable name="path">/<xsl:if test="not(defaultLanguage)"><xsl:value-of select="nativeName"/></xsl:if></xsl:variable>
 		<xsl:result-document href="docs{$path}/index.html" method="html" indent="no">
+			<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
 			<html lang="{$lang}">
 				<head>
 					<meta charset="utf-8"/>
