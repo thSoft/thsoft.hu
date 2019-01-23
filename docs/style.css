@@ -1,5 +1,24 @@
-h1 {
-  padding-bottom: 0.24em !important;
+.ui.vertical.menu {
+  width: 13.5rem !important;
+}
+
+/* Show menu icons on left */
+.ui.vertical.menu .item > i.icon.left {
+  float: none;
+  margin: 0em 0.35714286em 0em 0em;
+}
+
+.item > .menu > .item {
+  color: black !important;
+  font-size: 100% !important;
+}
+
+.contents {
+  margin-top: 1rem;
+  /* Push contents next to navigation bar */
+  margin-left: 28rem;
+  /* Ensure optimal reading width */
+  width: 50rem !important;
 }
 
 .poem {
@@ -11,43 +30,12 @@ h1 {
   background: url("loading.svg") center center no-repeat;
 }
 
-.navigation {
-  position: fixed !important;
-  top: 0;
-  width: 100%;
-  height: 9em;
-  z-index: 1;
-  background-color: white;
-}
-
-.contents {
-  /* Push contents below navigation bar */
-  position: relative;
-  top: 9.6em;
-  /* Ensure optimal reading width */
-  width: 50em !important;
-}
-
-/* Fix navigation bar overlapping target anchor */
-:target::before {
-  content: '';
-  display: block;
-  position: relative;
-  width: 0;
-  height: 8.4em;
-  margin-top: -8.4em;
-}
-
-/* Fix superfluous space before single icon in dropdown menu */
-i.dropdown.icon {
-  margin: 0 !important;
-}
-
-/* Fix dropdown icon wrapping */
-.ui.menu .dropdown.item .menu {
-  min-width: max-content !important;
-}
-
 figure {
   text-align: center;
+}
+
+.toc {
+  position: fixed;
+  top: 0;
+  left: 14rem;
 }

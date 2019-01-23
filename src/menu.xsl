@@ -21,88 +21,39 @@
 				</head>
 				<body>
 					<!-- Navbar -->
-					<div class="navigation ui segment">
-						<h1 class="ui center aligned header">
+					<div class="navigation ui left fixed vertical pointing menu">
+						<div class="header item">
 							<a href="#"><xsl:value-of select="/data/texts/title/*[name()=$lang]"/></a>
-						</h1>
-						<div class="ui centered grid">
-							<div class="ui horizontal divided list">
-								<!-- Categories -->
-								<xsl:for-each select="/data/categories/*">
-									<div class="item">
-										<div class="ui centered header" data-content="{description/*[name()=$lang]}" data-variation="small very wide">
-											<xsl:value-of select="name/*[name()=$lang]"/>
-										</div>
-										<!-- Activities -->
-										<xsl:for-each select="activities/*">
-											<div class="ui compact small menu">
-												<xsl:variable name="activityId" select="name()"/>
-												<xsl:for-each select="/data/activities/*[name()=$activityId]">
-													<xsl:variable name="activityName" select="name/*[name()=$lang]"/>
-													<xsl:variable name="escapedActivityName" select="fn:encode-for-uri($activityName)"/>
-													<a href="#{$escapedActivityName}" class="item" data-tab="{$escapedActivityName}">
-														<i class="{icon} icon"/>
-														<xsl:value-of select="$activityName"/>
-													</a>
-													<xsl:if test="not(links) and not(content)">
-														<div class="ui dropdown icon item">
-															<i class="dropdown icon"></i>
-															<div class="menu">
-																<xsl:variable name="groupBy" select="groupBy"/>
-																<xsl:choose>
-																	<xsl:when test="$groupBy"> <!-- Grouped -->
-																		<xsl:for-each select="/data/*[name()=$groupBy]/*">
-																			<div class="item">
-																				<xsl:variable name="groupName" select="name/*[name()=$lang]"/>
-																				<xsl:variable name="escapedGroupName" select="fn:encode-for-uri($groupName)"/>
-																				<xsl:variable name="qualifiedGroupName" select="concat($escapedActivityName, concat('/', $escapedGroupName))"/>
-																				<xsl:attribute name="onclick">location.hash = '#<xsl:value-of select="$qualifiedGroupName"/>'; $('.dropdown').dropdown('hide');</xsl:attribute>
-																				<xsl:value-of select="$groupName"/>
-																				<i class="dropdown icon"></i>
-																				<div class="menu">
-																					<xsl:for-each select="items/*">
-																						<xsl:variable name="itemId" select="name()"/>
-																						<xsl:for-each select="/data/*[name()=$activityId]/*[name()=$itemId]">
-																							<xsl:variable name="name" select="name/*[name()=$lang]"/>
-																							<xsl:variable name="escapedName" select="fn:encode-for-uri($name)"/>
-																							<xsl:variable name="qualifiedName" select="concat($escapedActivityName, concat('/', $escapedName))"/>
-																							<a href="#{$qualifiedName}" class="item">
-																								<xsl:value-of select="$name"/>
-																							</a>
-																						</xsl:for-each>
-																					</xsl:for-each>
-																				</div>
-																			</div>
-																		</xsl:for-each>
-																	</xsl:when>
-																	<xsl:otherwise> <!-- Ungrouped -->
-																		<xsl:for-each select="/data/*[name()=$activityId]/*">
-																			<xsl:variable name="name" select="name/*[name()=$lang]"/>
-																			<xsl:variable name="escapedName" select="fn:encode-for-uri($name)"/>
-																			<xsl:variable name="qualifiedName" select="concat($escapedActivityName, concat('/', $escapedName))"/>
-																			<a href="#{$qualifiedName}" class="item">
-																				<xsl:value-of select="$name"/>
-																			</a>
-																		</xsl:for-each>
-																	</xsl:otherwise>
-																</xsl:choose>
-															</div>
-														</div>
-													</xsl:if>
-												</xsl:for-each>
-											</div>
-										</xsl:for-each>
-									</div>
-								</xsl:for-each>
-							</div>
 						</div>
+						<!-- Categories -->
+						<xsl:for-each select="/data/categories/*">
+							<div class="item">
+								<div class="header" data-content="{description/*[name()=$lang]}" data-variation="small very wide">
+									<xsl:value-of select="name/*[name()=$lang]"/>
+								</div>
+								<div class="menu">
+									<xsl:for-each select="activities/*">
+										<xsl:variable name="activityId" select="name()"/>
+										<xsl:for-each select="/data/activities/*[name()=$activityId]">
+											<xsl:variable name="activityName" select="name/*[name()=$lang]"/>
+											<xsl:variable name="escapedActivityName" select="fn:encode-for-uri($activityName)"/>
+											<a href="#{$escapedActivityName}" class="item" data-tab="{$escapedActivityName}">
+												<i class="left {icon} icon"/>
+												<xsl:value-of select="$activityName"/>
+											</a>
+										</xsl:for-each>
+									</xsl:for-each>
+								</div>
+								<!-- Activities -->
+							</div>
+						</xsl:for-each>
 					</div>
 					<!-- Contents -->
-					<div class="contents ui container">
+					<div class="contents">
 						<!-- Home -->
 						<div class="ui active tab" data-tab="">
 							<div class="ui centered grid">
-								<div class="row">
+								<div class="ui segment">
 									<xsl:value-of select="/data/texts/intro/*[name()=$lang]"/>
 								</div>
 							</div>
@@ -113,7 +64,7 @@
 							<xsl:for-each select="/data/activities/*[name()=$activityId]">
 								<xsl:variable name="activityName" select="name/*[name()=$lang]"/>
 								<xsl:variable name="escapedActivityName" select="fn:encode-for-uri($activityName)"/>
-								<div class="ui tab" data-tab="{$escapedActivityName}">
+								<div class="ui tab container" data-tab="{$escapedActivityName}">
 									<h2 class="ui center aligned header">
 										<xsl:value-of select="$activityName"/>
 									</h2>
@@ -158,6 +109,53 @@
 											</xsl:choose>
 										</xsl:otherwise>
 									</xsl:choose>
+									<!-- TOC -->
+									<xsl:if test="not(links) and not(content)">
+										<div class="toc ui vertical following menu">
+											<xsl:variable name="groupBy" select="groupBy"/>
+											<xsl:choose>
+												<xsl:when test="$groupBy"> <!-- Grouped -->
+													<xsl:for-each select="/data/*[name()=$groupBy]/*">
+														<div class="ui accordion">
+															<xsl:variable name="groupName" select="name/*[name()=$lang]"/>
+															<xsl:variable name="escapedGroupName" select="fn:encode-for-uri($groupName)"/>
+															<xsl:variable name="qualifiedGroupName" select="concat($escapedActivityName, concat('/', $escapedGroupName))"/>
+															<xsl:attribute name="onclick">location.hash = '#<xsl:value-of select="$qualifiedGroupName"/>';</xsl:attribute>
+															<div class="title">
+																<i class="dropdown icon"></i>
+																<xsl:value-of select="$groupName"/>
+															</div>
+															<div class="content">
+																<div class="menu">
+																	<xsl:for-each select="items/*">
+																		<xsl:variable name="itemId" select="name()"/>
+																		<xsl:for-each select="/data/*[name()=$activityId]/*[name()=$itemId]">
+																			<xsl:variable name="name" select="name/*[name()=$lang]"/>
+																			<xsl:variable name="escapedName" select="fn:encode-for-uri($name)"/>
+																			<xsl:variable name="qualifiedName" select="concat($escapedActivityName, concat('/', $escapedName))"/>
+																			<a href="#{$qualifiedName}" class="item">
+																				<xsl:value-of select="$name"/>
+																			</a>
+																		</xsl:for-each>
+																	</xsl:for-each>
+																</div>
+															</div>
+														</div>
+													</xsl:for-each>
+												</xsl:when>
+												<xsl:otherwise> <!-- Ungrouped -->
+													<xsl:for-each select="/data/*[name()=$activityId]/*">
+														<xsl:variable name="name" select="name/*[name()=$lang]"/>
+														<xsl:variable name="escapedName" select="fn:encode-for-uri($name)"/>
+														<xsl:variable name="qualifiedName" select="concat($escapedActivityName, concat('/', $escapedName))"/>
+														<a href="#{$qualifiedName}" class="item">
+															<xsl:value-of select="$name"/>
+														</a>
+													</xsl:for-each>
+												</xsl:otherwise>
+											</xsl:choose>
+										</div>
+									</xsl:if>
 								</div>
 							</xsl:for-each>
 						</xsl:for-each>
@@ -190,7 +188,7 @@
 									lazyLoad.update();
 									// Content
 									var position = location.hash.includes('/') ? $(document.getElementById(location.hash.substring(1))).offset().top : 0;
-									$(document.body).scrollTop(position);
+									$('html, body').animate({ scrollTop: position }, 250);
 								}
 							}
 							performNavigation();

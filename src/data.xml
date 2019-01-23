@@ -1213,7 +1213,6 @@ My flower, my flower.</en>
 		<sermon>
 			<name><hu>Prédikáció a mérges madaraknak</hu><en>Sermon to the Angry Birds</en></name>
 			<drive>16GrkKBYVGUdHopPL9Tss8nJLGKNUwpGZ</drive>
-			<landscape/>
 			<inspiration>
 				<hu>Liszt Ferenc előszeretettel komponált virtuóz zongoraparafrázisokat közkedvelt dallamokra. „Réminescences aux «Oiseaux colériques»” című fantáziájával azonban, mint oly sokszor, jelentősen meghaladta korát, így bár hallgatói körében rendkívül népszerű volt, nem csoda, hogy a szakma korabeli kritikusai így nyilatkoztak róla:
 					<blockquote>„Fércmű, semmi eredeti nincs benne.”</blockquote>
@@ -1782,19 +1781,19 @@ Let peace reign within your walls, and abundance in your towers.</en>
 				<petróleumlámpa/>
 				<pachelbel/>
 				<zenei_mémek/>
-				<a_legmuzikalisabb_ember/>
 				<zenei_limerickek/>
+				<a_legmuzikalisabb_ember/>
 			</items>
 		</zene>
 		<mindennapok>
 			<name><hu>Mindennapok</hu><en>Common</en></name>
 			<items>
 				<kis_képes_enciklopédia/>
-				<besenyo_vacsora/>
 				<oda_a_penzhez/>
 				<filozófia/>
 				<horsy/>
 				<limerickek/>
+				<besenyo_vacsora/>
 			</items>
 		</mindennapok>
 		<irodalom>
