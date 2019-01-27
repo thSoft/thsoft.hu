@@ -18,17 +18,25 @@
 						crossorigin="anonymous"></script>
 					<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 					<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
+					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel"/>
+					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora"/>
 				</head>
 				<body>
 					<!-- Navbar -->
-					<div class="navigation ui left fixed vertical pointing menu">
-						<div class="header item">
+					<div class="navigation ui left fixed vertical menu">
+						<h1 class="header item">
 							<a href="#"><xsl:value-of select="/data/texts/title/*[name()=$lang]"/></a>
+						</h1>
+						<div class="menu">
+							<a href="#" class="item">
+								<i class="left home icon"/>
+								<xsl:value-of select="/data/texts/home/*[name()=$lang]"/>
+							</a>
 						</div>
 						<!-- Categories -->
 						<xsl:for-each select="/data/categories/*">
 							<div class="item">
-								<div class="header" data-content="{description/*[name()=$lang]}" data-variation="small very wide">
+								<div class="header" data-tooltip="{description/*[name()=$lang]}" data-variation="small very wide" data-position="right center">
 									<xsl:value-of select="name/*[name()=$lang]"/>
 								</div>
 								<div class="menu">
@@ -53,8 +61,18 @@
 						<!-- Home -->
 						<div class="ui active tab" data-tab="">
 							<div class="ui centered grid">
-								<div class="ui segment">
+								<div class="row">
+									<img width="250" height="250" src="portrait.png"/>
+								</div>
+								<div class="intro row">
 									<xsl:value-of select="/data/texts/intro/*[name()=$lang]"/>
+								</div>
+								<div class="row">
+									<h2 class="ui header"><xsl:value-of select="/data/texts/news/*[name()=$lang]"/></h2>
+								</div>
+								<div class="row">
+									<a class="twitter-timeline" data-lang="hu" data-width="698" href="https://twitter.com/ThsoftHu?ref_src=twsrc%5Etfw">Betöltés...</a>
+									<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 								</div>
 							</div>
 						</div>
@@ -111,34 +129,31 @@
 									</xsl:choose>
 									<!-- TOC -->
 									<xsl:if test="not(links) and not(content)">
-										<div class="toc ui vertical following menu">
+										<div class="toc ui vertical menu accordion">
 											<xsl:variable name="groupBy" select="groupBy"/>
 											<xsl:choose>
 												<xsl:when test="$groupBy"> <!-- Grouped -->
 													<xsl:for-each select="/data/*[name()=$groupBy]/*">
-														<div class="ui accordion">
-															<xsl:variable name="groupName" select="name/*[name()=$lang]"/>
-															<xsl:variable name="escapedGroupName" select="fn:encode-for-uri($groupName)"/>
-															<xsl:variable name="qualifiedGroupName" select="concat($escapedActivityName, concat('/', $escapedGroupName))"/>
-															<xsl:attribute name="onclick">location.hash = '#<xsl:value-of select="$qualifiedGroupName"/>';</xsl:attribute>
-															<div class="title">
-																<i class="dropdown icon"></i>
-																<xsl:value-of select="$groupName"/>
-															</div>
-															<div class="content">
-																<div class="menu">
-																	<xsl:for-each select="items/*">
-																		<xsl:variable name="itemId" select="name()"/>
-																		<xsl:for-each select="/data/*[name()=$activityId]/*[name()=$itemId]">
-																			<xsl:variable name="name" select="name/*[name()=$lang]"/>
-																			<xsl:variable name="escapedName" select="fn:encode-for-uri($name)"/>
-																			<xsl:variable name="qualifiedName" select="concat($escapedActivityName, concat('/', $escapedName))"/>
-																			<a href="#{$qualifiedName}" class="item">
-																				<xsl:value-of select="$name"/>
-																			</a>
-																		</xsl:for-each>
+														<xsl:variable name="groupName" select="name/*[name()=$lang]"/>
+														<xsl:variable name="escapedGroupName" select="fn:encode-for-uri($groupName)"/>
+														<xsl:variable name="qualifiedGroupName" select="concat($escapedActivityName, concat('/', $escapedGroupName))"/>
+														<div class="title">
+															<i class="dropdown icon"></i>
+															<a href="#{$qualifiedGroupName}"><xsl:value-of select="$groupName"/></a>
+														</div>
+														<div class="content">
+															<div class="menu">
+																<xsl:for-each select="items/*">
+																	<xsl:variable name="itemId" select="name()"/>
+																	<xsl:for-each select="/data/*[name()=$activityId]/*[name()=$itemId]">
+																		<xsl:variable name="name" select="name/*[name()=$lang]"/>
+																		<xsl:variable name="escapedName" select="fn:encode-for-uri($name)"/>
+																		<xsl:variable name="qualifiedName" select="concat($escapedActivityName, concat('/', $escapedName))"/>
+																		<a href="#{$qualifiedName}" class="item">
+																			<xsl:value-of select="$name"/>
+																		</a>
 																	</xsl:for-each>
-																</div>
+																</xsl:for-each>
 															</div>
 														</div>
 													</xsl:for-each>
@@ -174,18 +189,22 @@
 							function getActivityName(path) {
 								return path.includes('/') ? path.substring(0, path.indexOf('/')) : path;
 							}
-							function performNavigation() {
+							function performNavigation(event) {
 								$('.menu .item.active').removeClass('active');
 								if (!location.hash) {
 									// Home
 									$.tab('change tab', "");
+									$('a[href="#"]').addClass('active');
 								} else {
 									// Activity
 									var activityName = getActivityName(location.hash);
-									var item = $(document.querySelector('a[href="' + activityName + '"]'));
-									item.addClass('active');
-									$.tab('change tab', item.data('tab'));
-									lazyLoad.update();
+									var oldActivityName = event ? getActivityName(event.oldURL.split('#')[1]) : "";
+									if (activityName != oldActivityName) {
+										var item = $(document.querySelector('a[href="' + activityName + '"]'));
+										item.addClass('active');
+										$.tab('change tab', item.data('tab'));
+										lazyLoad.update();
+									}
 									// Content
 									var position = location.hash.includes('/') ? $(document.getElementById(location.hash.substring(1))).offset().top : 0;
 									$('html, body').animate({ scrollTop: position }, 250);
@@ -332,13 +351,17 @@
 
 	<!-- YouTube Videos -->
 	<xsl:template match="*[@type='youtube']">
-		<iframe class="lazy" width="640" height="360" data-src="https://www.youtube.com/embed/{id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+		<div class="ui centered grid">
+			<div class="row">
+				<iframe class="lazy" width="612" height="360" data-src="https://www.youtube.com/embed/{id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+			</div>
+		</div>
 	</xsl:template>
 
 	<!-- Vimeo Videos -->
 	<xsl:template match="*[@type='vimeo']">
 		<div class="ui centered grid">
-			<iframe class="lazy" data-src="https://player.vimeo.com/video/{id}" width="640" height="360" frameborder="0"></iframe>
+			<iframe class="lazy" data-src="https://player.vimeo.com/video/{id}" width="640" height="360" frameborder="0"></iframe> <!-- 640 will be changed to 612 :S -->
 		</div>
 	</xsl:template>
 
@@ -350,7 +373,9 @@
 	<!-- Slideshare -->
 	<xsl:template match="*[@type='slideshare']">
 		<div class="ui centered grid">
-			<iframe class="lazy" data-src="http://www.slideshare.net/slideshow/embed_code/key/{id}" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen="allowfullscreen"></iframe>
+			<div class="row">
+				<iframe class="lazy" data-src="http://www.slideshare.net/slideshow/embed_code/key/{id}" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen="allowfullscreen"></iframe>
+			</div>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

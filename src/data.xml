@@ -12,7 +12,9 @@
 	</languages>
 	<texts>
 		<title><hu>Harmath Dénes honlapja</hu><en>Homepage of Dénes Harmath</en></title>
-		<intro><hu>Sok szeretettel üdvözöllek Harmath Dénes honlapján! <!-- TODO --></hu><en></en></intro>
+		<home><hu>Kezdőlap</hu><en>Home</en></home>
+		<intro><hu>Szeretettel üdvözöllek Harmath Dénes honlapján!</hu><en></en></intro>
+		<news><hu>Újdonságok</hu><en></en></news>
 		<download_score><hu>Kotta letöltése</hu><en>Download Score</en></download_score>
 		<lyrics><hu>Dalszöveg</hu><en>Lyrics</en></lyrics>
 		<instructions><hu>Használati utasítás</hu><en>Usage instructions</en></instructions>
@@ -136,7 +138,7 @@
 		</orgona>
 	</recordings>
 	<concerts>
-		<div class="ui centered grid">
+		<div class="ui segment">
 			<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=480&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=qkgdmfh2ptn60vrc6q0hkaeur4%40group.calendar.google.com&amp;color=%23691426&amp;ctz=Europe%2FBudapest" style="border-width:0" width="100%" height="480" frameborder="0" scrolling="no"></iframe>
 		</div>
 	</concerts>
@@ -683,6 +685,7 @@ Amen.</en></lyrics>
 		<o_vos_omnes>
 			<name><hu>O vos omnes</hu><en>O vos omnes</en></name>
 			<drive>1_FVnFhlKC9j6cTczF6tFp2J35fuS6bE1</drive>
+			<landscape/>
 			<inspiration>
 				<hu>Eme nagyböjti motetta ajánlása azoknak szól, akiknek át kellett élniük szerettük elvesztését, különösképpen pedig azoknak, akiket nemrégiben ért ilyen csapás.</hu>
 				<en>Dedicated to those who lost their beloved one, especially if they lived through it recently.</en>
@@ -1520,7 +1523,8 @@ for thither did the tribes go up, the tribes of the Lord, to praise Thy name, O 
 			</inspiration>
 			<lyrics>
 				<hu>Magasztalja lelkem az Urat, és szívem ujjong üdvözítő Istenemben.
-Tekintetre méltatta alázatos szolgálóleányát: Íme ezentúl boldognak hirdet minden nemzedék,
+Tekintetre méltatta alázatos szolgálóleányát:
+Íme, ezentúl boldognak hirdet minden nemzedék,
 mert nagyot művelt velem ő, aki Hatalmas: ő, akit Szentnek hívunk.
 Nemzedékről nemzedékre megmarad irgalma azokon, akik istenfélők.
 Csodát művelt erős karjával: a kevélykedőket széjjelszórta,
@@ -1648,10 +1652,10 @@ Let peace reign within your walls, and abundance in your towers.</en>
 			<name><hu>Proprium missae</hu><en>Proprium Missae</en></name>
 			<items>
 				<vidimus_stellam/>
+				<laetatus_sum/>
 				<jerusalem_quae_aedificatur/>
 				<ascendit_deus/>
 				<gustate_et_videte/>
-				<laetatus_sum/>
 			</items>
 		</propriumMissae>
 		<arany_bitek>
@@ -1747,8 +1751,8 @@ Let peace reign within your walls, and abundance in your towers.</en>
 			<items>
 				<air/>
 				<nun_lob/>
-				<nice_work/>
 				<lacrimosa/>
+				<nice_work/>
 			</items>
 		</átiratok>
 	</compositionCollections>
@@ -2726,8 +2730,8 @@ The first key entitled <tt class="key">Any</tt> has been expected by many users 
 		</via_crucis_előadás>
 		<kosztolányi type="scribd">
 			<name><hu>Kosztolányi Dezső Marcus Aurelius című versének értelmező elemzése</hu></name>
-			<id>122479575</id>
-			<access>key-1flzqm6oj9rw1t3zrwkq</access>
+			<id>398208237</id>
+			<access>key-kHMMVDc2JwvwdByaxpaN</access>
 		</kosztolányi>
 		<petőfi type="scribd">
 			<name><hu>A költészet feladatának értelmezése Petőfi költészetében</hu></name>
@@ -2741,8 +2745,8 @@ The first key entitled <tt class="key">Any</tt> has been expected by many users 
 		</madách>
 		<ady type="scribd">
 			<name><hu>Ady lírája sajátosságainak bemutatása egy szabadon választott vers alapján</hu></name>
-			<id>122479572</id>
-			<access>key-1uyi6vsr8djoogsviaa7</access>
+			<id>398218439</id>
+			<access>key-jKks2ds4hKUO7RRxakzW</access>
 		</ady>
 		<munkácsy type="scribd">
 			<name><hu>A műalkotás sorsa az alkotói munkafolyamattól kezdve a hermeneutikai befogadásig Munkácsy Mihály Krisztus-trilogiáján keresztül</hu></name>
@@ -2761,21 +2765,21 @@ The first key entitled <tt class="key">Any</tt> has been expected by many users 
 				<via_crucis_előadás/>
 			</items>
 		</zene>
-		<irodalom>
-			<name><hu>Irodalom</hu><en>Literature</en></name>
-			<items>
-				<kosztolányi/>
-				<petőfi/>
-				<madách/>
-				<ady/>
-			</items>
-		</irodalom>
 		<képzőművészet>
 			<name><hu>Képzőművészet</hu><en>Fine arts</en></name>
 			<items>
 				<munkácsy/>
 			</items>
 		</képzőművészet>
+		<irodalom>
+			<name><hu>Irodalom</hu><en>Literature</en></name>
+			<items>
+				<kosztolányi/>
+				<!--<petőfi/>
+				<madách/>-->
+				<ady/>
+			</items>
+		</irodalom>
 	</artBranches>
 	<science>
 		<gépi_kreativitás type="scribd">
