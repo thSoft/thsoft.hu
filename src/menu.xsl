@@ -12,6 +12,7 @@
 					<title><xsl:value-of select="/data/texts/title/*[name()=$lang]"/></title>
 					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"/>
 					<link rel="stylesheet" href="style.css"/>
+					<link rel="stylesheet" href="mediaqueries.css"/>
 					<script
 						src="https://code.jquery.com/jquery-3.1.1.min.js"
 						integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -23,7 +24,7 @@
 				</head>
 				<body>
 					<!-- Navbar -->
-					<div class="navigation ui left fixed vertical menu">
+					<div class="navigation mobile hidden ui left fixed vertical menu">
 						<h1 class="header item">
 							<a href="#"><xsl:value-of select="/data/texts/title/*[name()=$lang]"/></a>
 						</h1>
@@ -40,6 +41,7 @@
 									<xsl:value-of select="name/*[name()=$lang]"/>
 								</div>
 								<div class="menu">
+									<!-- Activities -->
 									<xsl:for-each select="activities/*">
 										<xsl:variable name="activityId" select="name()"/>
 										<xsl:for-each select="/data/activities/*[name()=$activityId]">
@@ -52,9 +54,38 @@
 										</xsl:for-each>
 									</xsl:for-each>
 								</div>
-								<!-- Activities -->
 							</div>
 						</xsl:for-each>
+					</div>
+					<!-- Mobile navbar -->
+					<div class="mobile-navigation mobile only ui labeled icon dropdown button">
+						<i class="dropdown icon"/>
+						<span class="text"/>
+						<div class="menu">
+							<a href="#" data-value="#" class="selected item">
+								<i class="left home icon"/>
+								<xsl:value-of select="/data/texts/home/*[name()=$lang]"/>
+							</a>
+							<!-- Categories -->
+							<xsl:for-each select="/data/categories/*">
+								<div class="divider"/>
+								<div class="header" data-tooltip="{description/*[name()=$lang]}" data-variation="small very wide" data-position="right center">
+									<xsl:value-of select="name/*[name()=$lang]"/>
+								</div>
+								<!-- Activities -->
+								<xsl:for-each select="activities/*">
+									<xsl:variable name="activityId" select="name()"/>
+									<xsl:for-each select="/data/activities/*[name()=$activityId]">
+										<xsl:variable name="activityName" select="name/*[name()=$lang]"/>
+										<xsl:variable name="escapedActivityName" select="fn:encode-for-uri($activityName)"/>
+										<a href="#{$escapedActivityName}" data-value="#{$escapedActivityName}" class="item">
+											<i class="left {icon} icon"/>
+											<xsl:value-of select="$activityName"/>
+										</a>
+									</xsl:for-each>
+								</xsl:for-each>
+							</xsl:for-each>
+						</div>
 					</div>
 					<!-- Contents -->
 					<div class="contents">
@@ -129,7 +160,7 @@
 									</xsl:choose>
 									<!-- TOC -->
 									<xsl:if test="not(links) and not(content)">
-										<div class="toc ui vertical menu accordion">
+										<div class="toc mobile hidden ui vertical menu accordion">
 											<xsl:variable name="groupBy" select="groupBy"/>
 											<xsl:choose>
 												<xsl:when test="$groupBy"> <!-- Grouped -->
@@ -195,14 +226,16 @@
 									// Home
 									$.tab('change tab', "");
 									$('a[href="#"]').addClass('active');
+									$('.mobile-navigation').dropdown('set selected', "#");
 								} else {
 									// Activity
 									var activityName = getActivityName(location.hash);
 									var oldActivityName = event ? getActivityName(event.oldURL.split('#')[1]) : "";
 									if (activityName != oldActivityName) {
-										var item = $(document.querySelector('a[href="' + activityName + '"]'));
+										var item = $(document.querySelectorAll('a[href="' + activityName + '"]'));
 										item.addClass('active');
 										$.tab('change tab', item.data('tab'));
+										$('.mobile-navigation').dropdown('set selected', activityName);
 										lazyLoad.update();
 									}
 									// Content
