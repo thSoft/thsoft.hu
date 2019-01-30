@@ -59,7 +59,7 @@
 						</xsl:for-each>
 					</div>
 					<!-- Mobile navbar -->
-					<div class="mobile-navigation mobile only ui labeled icon dropdown button">
+					<div class="mobile-navigation mobile only ui labeled icon upward dropdown button">
 						<i class="dropdown icon"/>
 						<span class="text"/>
 						<div class="menu">
@@ -103,7 +103,7 @@
 									<h2 class="ui header"><xsl:value-of select="/data/texts/news/*[name()=$lang]"/></h2>
 								</div>
 								<div class="row">
-									<a class="twitter-timeline" data-lang="hu" data-width="698" href="https://twitter.com/ThsoftHu?ref_src=twsrc%5Etfw">Betöltés...</a>
+									<a class="twitter-timeline" data-lang="hu" data-width="92%" href="https://twitter.com/ThsoftHu?ref_src=twsrc%5Etfw">Betöltés...</a>
 									<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 								</div>
 							</div>
@@ -263,7 +263,7 @@
 	<xsl:template name="links">
 		<xsl:param name="lang"/>
 		<xsl:param name="links"/>
-		<div class="ui two cards">
+		<div class="ui stackable two cards">
 			<xsl:for-each select="$links">
 				<xsl:variable name="name" select="name/*[name()=$lang]"/>
 				<div class="ui card">
@@ -322,10 +322,10 @@
 		<xsl:param name="lang"/>
 		<div class="ui centered grid">
 			<xsl:for-each select="youtube/playlist">
-				<div class="row"><iframe class="lazy" width="560" height="315" data-src="https://www.youtube.com/embed/videoseries?list={text()}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
+				<div class="row"><iframe class="lazy video" data-src="https://www.youtube.com/embed/videoseries?list={text()}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
 			</xsl:for-each>
 			<xsl:for-each select="bandcamp/album">
-				<div class="row"><iframe class="lazy" style="border: 0; width: 42em; height: 315px;" data-src="https://bandcamp.com/EmbeddedPlayer/album={text()}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=true/artwork=small/transparent=true/" seamless="seamless"></iframe></div>
+				<div class="row"><iframe class="lazy" style="border: 0; width: 100%; height: 315px;" data-src="https://bandcamp.com/EmbeddedPlayer/album={text()}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=true/artwork=small/transparent=true/" seamless="seamless"></iframe></div>
 			</xsl:for-each>
 		</div>
 	</xsl:template>
@@ -342,10 +342,10 @@
 				<iframe class="lazy" style="border: 0; width: {$width}em; height: 42em" data-src="https://drive.google.com/file/d/{drive}/preview"></iframe>
 			</div>
 			<xsl:if test="video-performance">
-				<div class="row"><iframe class="lazy" width="560" height="315" data-src="https://www.youtube.com/embed/{video-performance}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
+				<div class="row"><iframe class="lazy video" data-src="https://www.youtube.com/embed/{video-performance}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
 			</xsl:if>
 			<xsl:if test="audio-performance">
-				<div class="row"><iframe class="lazy" style="border: 0; width: 42em; height: 120px;" data-src="{audio-performance}" seamless="seamless"></iframe></div>
+				<div class="row"><iframe class="lazy" style="border: 0; width: 100%; height: 120px;" data-src="{audio-performance}" seamless="seamless"></iframe></div>
 			</xsl:if>
 			<xsl:variable name="lyrics" select="lyrics/*[name()=$lang]"/>
 			<xsl:if test="$lyrics">
@@ -387,7 +387,7 @@
 	<xsl:template match="*[@type='youtube']">
 		<div class="ui centered grid">
 			<div class="row">
-				<iframe class="lazy" width="612" height="360" data-src="https://www.youtube.com/embed/{id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+				<iframe class="lazy video" data-src="https://www.youtube.com/embed/{id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
 			</div>
 		</div>
 	</xsl:template>
@@ -395,7 +395,9 @@
 	<!-- Vimeo Videos -->
 	<xsl:template match="*[@type='vimeo']">
 		<div class="ui centered grid">
-			<iframe class="lazy" data-src="https://player.vimeo.com/video/{id}" width="640" height="360" frameborder="0"></iframe> <!-- 640 will be changed to 612 :S -->
+			<div class="row">
+				<iframe class="lazy video" data-src="https://player.vimeo.com/video/{id}" frameborder="0"></iframe>
+			</div>
 		</div>
 	</xsl:template>
 

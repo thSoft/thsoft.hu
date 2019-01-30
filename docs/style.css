@@ -40,9 +40,12 @@
 
 .mobile-navigation {
   position: fixed !important;
+  left: 0;
   right: 0;
-  top: 0;
+  bottom: 0;
   z-index: 1;
+  box-shadow: 0 1px 8px 0 rgba(34,36,38,.2) !important;
+  margin-right: 0 !important;
 }
 
 .toc {
@@ -80,18 +83,28 @@
     padding-left: 27.3rem;
   }
 }
+@media only screen and (max-width: 768px) {
+  .contents {
+    padding-bottom: 3rem;
+  }
+}
 
 .contents {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
-  /* Ensure optimal reading width */
-  width: 50rem !important;
+  max-width: 50rem !important; /* Ensure optimal reading width */
+}
+
+@media only screen and (max-width: 767px) {
+  .contents {
+    width: 100vw !important;
+  }
 }
 
 .poem {
   text-align: center;
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 .loading {
@@ -100,6 +113,10 @@
 
 figure {
   text-align: center;
+}
+
+figure img {
+  max-width: 100%;
 }
 
 body, [data-tooltip]:after, .button {
@@ -131,4 +148,23 @@ h2 {
 .intro {
   font-size: 200%;
   font-weight: bold;
+  line-height: 150%;
+}
+
+@media only screen and (min-width: 768px) {
+  .video {
+    max-width: 95%;
+    width: 56vw;
+    height: 31.5vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .video {
+    width: 84vw;
+    height: 47.25vw;
+  }
+}
+
+iframe {
+  max-width: 100%;
 }
