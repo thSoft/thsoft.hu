@@ -94,7 +94,7 @@
 						<div class="ui active tab" data-tab="#">
 							<div class="ui centered grid">
 								<div class="row">
-									<img width="250" height="250" src="portrait.png"/>
+									<img class="lazy" data-src="portrait.png" style="width: 250px; height: 250px;"/>
 								</div>
 								<div class="intro row">
 									<xsl:value-of select="/data/texts/intro/*[name()=$lang]"/>
@@ -269,7 +269,7 @@
 				<div class="ui card">
 					<xsl:if test="image">
 						<a class="image" href="{url}" target="_blank">
-							<img src="{image}"/>
+							<img class="lazy" data-src="{image}"/>
 						</a>
 					</xsl:if>
 					<div class="content">

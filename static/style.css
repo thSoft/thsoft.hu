@@ -107,7 +107,11 @@
   white-space: pre-wrap;
 }
 
-.loading {
+img:not([src]) {
+  visibility: hidden;
+}
+
+iframe.loading {
   background: url("loading.svg") center center no-repeat;
 }
 
