@@ -91,7 +91,7 @@
 					<!-- Contents -->
 					<div class="contents">
 						<!-- Home -->
-						<div class="ui active tab" data-tab="">
+						<div class="ui active tab" data-tab="#">
 							<div class="ui centered grid">
 								<div class="row">
 									<img width="250" height="250" src="portrait.png"/>
@@ -224,7 +224,7 @@
 								$('.menu .item.active').removeClass('active');
 								if (!location.hash) {
 									// Home
-									$.tab('change tab', "");
+									$.tab('change tab', "#");
 									$('a[href="#"]').addClass('active');
 									$('.mobile-navigation').dropdown('set selected', "#");
 								} else {
