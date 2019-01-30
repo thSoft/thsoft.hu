@@ -103,8 +103,7 @@
 									<h2 class="ui header"><xsl:value-of select="/data/texts/news/*[name()=$lang]"/></h2>
 								</div>
 								<div class="row">
-									<a class="twitter-timeline" data-lang="hu" data-width="92%" href="https://twitter.com/ThsoftHu?ref_src=twsrc%5Etfw">Betöltés...</a>
-									<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+									<a class="twitter-timeline" data-lang="hu" data-width="92%" href="https://twitter.com/ThsoftHu?ref_src=twsrc%5Etfw" data-chrome="noheader nofooter noborders">Betöltés...</a>
 								</div>
 							</div>
 						</div>
@@ -254,6 +253,7 @@
 							$('.ui.accordion').accordion();
 						});
 					</script>
+					<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</body>
 			</html>
 		</xsl:result-document>
