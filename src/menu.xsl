@@ -24,6 +24,70 @@
 					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora"/>
 				</head>
 				<body>
+					<!-- Navbar -->
+					<div class="navigation mobile hidden ui left fixed vertical menu">
+						<h1 class="header item">
+							<a href="#"><xsl:value-of select="/data/texts/title/*[name()=$lang]"/></a>
+						</h1>
+						<div class="menu">
+							<a href="#" class="item">
+								<i class="left home icon"/>
+								<xsl:value-of select="/data/texts/home/*[name()=$lang]"/>
+							</a>
+						</div>
+						<!-- Categories -->
+						<xsl:for-each select="/data/categories/*">
+							<div class="item">
+								<div class="header" data-tooltip="{description/*[name()=$lang]}" data-variation="small very wide" data-position="right center">
+									<xsl:value-of select="name/*[name()=$lang]"/>
+								</div>
+								<div class="menu">
+									<!-- Activities -->
+									<xsl:for-each select="activities/*">
+										<xsl:variable name="activityId" select="name()"/>
+										<xsl:for-each select="/data/activities/*[name()=$activityId]">
+											<xsl:variable name="activityName" select="name/*[name()=$lang]"/>
+											<xsl:variable name="escapedActivityName" select="fn:encode-for-uri($activityName)"/>
+											<a href="#{$escapedActivityName}" class="item" data-tab="{$escapedActivityName}">
+												<i class="left {icon} icon"/>
+												<xsl:value-of select="$activityName"/>
+											</a>
+										</xsl:for-each>
+									</xsl:for-each>
+								</div>
+							</div>
+						</xsl:for-each>
+					</div>
+					<!-- Mobile navbar -->
+					<div class="mobile-navigation mobile only ui labeled icon upward dropdown button">
+						<i class="dropdown icon"/>
+						<span class="text"/>
+						<div class="menu">
+							<a href="#" data-value="#" class="selected item">
+								<i class="left home icon"/>
+								<xsl:value-of select="/data/texts/home/*[name()=$lang]"/>
+							</a>
+							<!-- Categories -->
+							<xsl:for-each select="/data/categories/*">
+								<div class="divider"/>
+								<div class="header" data-tooltip="{description/*[name()=$lang]}" data-variation="small very wide" data-position="right center">
+									<xsl:value-of select="name/*[name()=$lang]"/>
+								</div>
+								<!-- Activities -->
+								<xsl:for-each select="activities/*">
+									<xsl:variable name="activityId" select="name()"/>
+									<xsl:for-each select="/data/activities/*[name()=$activityId]">
+										<xsl:variable name="activityName" select="name/*[name()=$lang]"/>
+										<xsl:variable name="escapedActivityName" select="fn:encode-for-uri($activityName)"/>
+										<a href="#{$escapedActivityName}" data-value="#{$escapedActivityName}" class="item">
+											<i class="left {icon} icon"/>
+											<xsl:value-of select="$activityName"/>
+										</a>
+									</xsl:for-each>
+								</xsl:for-each>
+							</xsl:for-each>
+						</div>
+					</div>
 					<!-- Contents -->
 					<div class="contents">
 						<!-- Home -->
@@ -142,70 +206,6 @@
 								</div>
 							</xsl:for-each>
 						</xsl:for-each>
-					</div>
-					<!-- Navbar -->
-					<div class="navigation mobile hidden ui left fixed vertical menu">
-						<h1 class="header item">
-							<a href="#"><xsl:value-of select="/data/texts/title/*[name()=$lang]"/></a>
-						</h1>
-						<div class="menu">
-							<a href="#" class="item">
-								<i class="left home icon"/>
-								<xsl:value-of select="/data/texts/home/*[name()=$lang]"/>
-							</a>
-						</div>
-						<!-- Categories -->
-						<xsl:for-each select="/data/categories/*">
-							<div class="item">
-								<div class="header" data-tooltip="{description/*[name()=$lang]}" data-variation="small very wide" data-position="right center">
-									<xsl:value-of select="name/*[name()=$lang]"/>
-								</div>
-								<div class="menu">
-									<!-- Activities -->
-									<xsl:for-each select="activities/*">
-										<xsl:variable name="activityId" select="name()"/>
-										<xsl:for-each select="/data/activities/*[name()=$activityId]">
-											<xsl:variable name="activityName" select="name/*[name()=$lang]"/>
-											<xsl:variable name="escapedActivityName" select="fn:encode-for-uri($activityName)"/>
-											<a href="#{$escapedActivityName}" class="item" data-tab="{$escapedActivityName}">
-												<i class="left {icon} icon"/>
-												<xsl:value-of select="$activityName"/>
-											</a>
-										</xsl:for-each>
-									</xsl:for-each>
-								</div>
-							</div>
-						</xsl:for-each>
-					</div>
-					<!-- Mobile navbar -->
-					<div class="mobile-navigation mobile only ui labeled icon upward dropdown button">
-						<i class="dropdown icon"/>
-						<span class="text"/>
-						<div class="menu">
-							<a href="#" data-value="#" class="selected item">
-								<i class="left home icon"/>
-								<xsl:value-of select="/data/texts/home/*[name()=$lang]"/>
-							</a>
-							<!-- Categories -->
-							<xsl:for-each select="/data/categories/*">
-								<div class="divider"/>
-								<div class="header" data-tooltip="{description/*[name()=$lang]}" data-variation="small very wide" data-position="right center">
-									<xsl:value-of select="name/*[name()=$lang]"/>
-								</div>
-								<!-- Activities -->
-								<xsl:for-each select="activities/*">
-									<xsl:variable name="activityId" select="name()"/>
-									<xsl:for-each select="/data/activities/*[name()=$activityId]">
-										<xsl:variable name="activityName" select="name/*[name()=$lang]"/>
-										<xsl:variable name="escapedActivityName" select="fn:encode-for-uri($activityName)"/>
-										<a href="#{$escapedActivityName}" data-value="#{$escapedActivityName}" class="item">
-											<i class="left {icon} icon"/>
-											<xsl:value-of select="$activityName"/>
-										</a>
-									</xsl:for-each>
-								</xsl:for-each>
-							</xsl:for-each>
-						</div>
 					</div>
 					<!-- Script -->
 					<script language="javascript">
