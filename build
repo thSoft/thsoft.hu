@@ -1,5 +1,5 @@
 echo "Building..."
-OUTPUT=docs
+OUTPUT=www
 rm -rf $OUTPUT
 mkdir $OUTPUT
 cp -r static/* $OUTPUT
