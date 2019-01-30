@@ -104,6 +104,7 @@
 								</div>
 								<div class="row">
 									<a class="twitter-timeline" data-lang="hu" data-width="92%" href="https://twitter.com/ThsoftHu?ref_src=twsrc%5Etfw" data-chrome="noheader nofooter noborders">Betöltés...</a>
+									<script defer="defer" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 								</div>
 							</div>
 						</div>
@@ -240,7 +241,7 @@
 									}
 									// Content
 									var position = location.hash.includes('/') ? $(document.getElementById(location.hash.substring(1))).offset().top : 0;
-									$('html, body').animate({ scrollTop: position }, 250);
+									$('html, body').scrollTop(position);
 								}
 							}
 							performNavigation();
@@ -253,7 +254,6 @@
 							$('.ui.accordion').accordion();
 						});
 					</script>
-					<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</body>
 			</html>
 		</xsl:result-document>
