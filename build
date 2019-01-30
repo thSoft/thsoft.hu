@@ -3,6 +3,6 @@ OUTPUT=www
 rm -rf $OUTPUT
 mkdir $OUTPUT
 cp -r static/* $OUTPUT
-saxon -xsl:src/menu.xsl -s:src/data.xml -o:temp
+saxon -xsl:src/template.xsl -s:src/data.xml -o:temp
 rm temp
 echo "Done."
