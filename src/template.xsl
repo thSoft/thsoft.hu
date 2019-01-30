@@ -248,6 +248,7 @@
 							window.onhashchange = performNavigation;
 							// Dropdown
 							$('.ui.dropdown').dropdown();
+							$('.ui.upward.dropdown').dropdown({ direction : 'upward' });
 							// Modals
 							$('.ui.modal').modal();
 							// Accordions
