@@ -231,7 +231,7 @@
 								} else {
 									// Activity
 									var activityName = getActivityName(location.hash);
-									var oldActivityName = event ? getActivityName(event.oldURL.split('#')[1]) : "";
+									var oldActivityName = event &amp;&amp; event.oldURL &amp;&amp; event.oldURL.includes('#') ? getActivityName(event.oldURL.split('#')[1]) : "";
 									if (activityName != oldActivityName) {
 										var item = $(document.querySelectorAll('a[href="' + activityName + '"]'));
 										item.addClass('active');
