@@ -10,7 +10,21 @@
 				<head>
 					<meta charset="utf-8"/>
 					<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
 					<title><xsl:value-of select="/data/texts/title/*[name()=$lang]"/></title>
+
+					<!-- Google Analytics -->
+					<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-1188284-1"></script>
+					<script>
+					  window.dataLayer = window.dataLayer || [];
+					  function gtag(){dataLayer.push(arguments);}
+					  gtag('js', new Date());
+
+					  gtag('config', 'UA-1188284-1', {
+							'page_path': location.pathname + location.hash
+						});
+					</script>
+
 					<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"/>
 					<link rel="stylesheet" href="style.css"/>
 					<link rel="stylesheet" href="mediaqueries.css"/>
@@ -221,8 +235,6 @@
 					<!-- Script -->
 					<script language="javascript">
 						$(document).ready(function() {
-							// Popups
-							$('.header').popup();
 							// Lazy loading
 							var lazyLoad = new LazyLoad({
 								elements_selector: ".lazy",
@@ -233,6 +245,10 @@
 								return path.includes('/') ? path.substring(0, path.indexOf('/')) : path;
 							}
 							function performNavigation(event) {
+								// Google Analytics
+								gtag('event', 'pageview', {
+									'page_path': location.pathname+location.search+location.hash
+								});
 								$('.menu .item.active').removeClass('active');
 								if (!location.hash) {
 									// Home
@@ -257,7 +273,9 @@
 							}
 							performNavigation();
 							window.onhashchange = performNavigation;
-							// Dropdown
+							// Popups
+							$('.header').popup();
+							// Dropdowns
 							$('.ui.dropdown').dropdown();
 							$('.mobile-navigation').dropdown({ direction : 'upward', action: 'hide' });
 							// Modals
