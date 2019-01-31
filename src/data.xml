@@ -16,8 +16,9 @@
 		<intro><hu>Szeretettel köszöntelek Harmath Dénes honlapján!</hu><en></en></intro>
 		<news><hu>Újdonságok</hu><en></en></news>
 		<download_score><hu>Kotta letöltése</hu><en>Download Score</en></download_score>
-		<lyrics><hu>Dalszöveg</hu><en>Lyrics</en></lyrics>
+		<lyrics><hu>A mű szövege</hu><en>Lyrics</en></lyrics>
 		<instructions><hu>Használati utasítás</hu><en>Usage instructions</en></instructions>
+		<contact><hu>Kapcsolat</hu><en>Contact</en></contact>
 	</texts>
 	<categories>
 		<music>

@@ -57,9 +57,16 @@
 								</div>
 							</div>
 						</xsl:for-each>
+						<div class="item">
+							<div class="menu">
+								<xsl:call-template name="contact">
+									<xsl:with-param name="lang" select="$lang"/>
+								</xsl:call-template>
+							</div>
+						</div>
 					</div>
 					<!-- Mobile navbar -->
-					<div class="mobile-navigation mobile only ui labeled icon upward dropdown button">
+					<div class="mobile-navigation mobile only ui labeled icon dropdown button">
 						<i class="dropdown icon"/>
 						<span class="text"/>
 						<div class="menu">
@@ -86,6 +93,10 @@
 									</xsl:for-each>
 								</xsl:for-each>
 							</xsl:for-each>
+							<div class="divider"/>
+							<xsl:call-template name="contact">
+								<xsl:with-param name="lang" select="$lang"/>
+							</xsl:call-template>
 						</div>
 					</div>
 					<!-- Contents -->
@@ -248,7 +259,7 @@
 							window.onhashchange = performNavigation;
 							// Dropdown
 							$('.ui.dropdown').dropdown();
-							$('.ui.upward.dropdown').dropdown({ direction : 'upward' });
+							$('.mobile-navigation').dropdown({ direction : 'upward', action: 'hide' });
 							// Modals
 							$('.ui.modal').modal();
 							// Accordions
@@ -414,5 +425,14 @@
 				<iframe class="lazy" data-src="http://www.slideshare.net/slideshow/embed_code/key/{id}" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen="allowfullscreen"></iframe>
 			</div>
 		</div>
+	</xsl:template>
+
+	<!-- Contact -->
+	<xsl:template name="contact">
+		<xsl:param name="lang"/>
+		<a href="https://goo.gl/forms/6VTjEdKl20hQ5iS93" target="_blank" class="item">
+			<i class="left envelope outline icon"/>
+			<xsl:value-of select="/data/texts/contact/*[name()=$lang]"/>
+		</a>
 	</xsl:template>
 </xsl:stylesheet>
