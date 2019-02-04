@@ -235,7 +235,7 @@
 									</xsl:if>
 									<!-- Mobile TOC -->
 									<xsl:if test="not(links) and not(content) and groupBy">
-										<div class="mobile-toc mobile only ui labeled icon dropdown button">
+										<div class="mobile-toc mobile only ui tiny labeled icon dropdown button">
 											<i class="dropdown icon"/>
 											<div class="text"><xsl:value-of select="/data/texts/jump/*[name()=$lang]"/></div>
 											<xsl:variable name="groupBy" select="groupBy"/>
