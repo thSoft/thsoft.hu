@@ -118,6 +118,11 @@
 						<!-- Home -->
 						<div class="ui active tab" data-tab="#">
 							<div class="ui centered grid">
+								<div class="notfound ui hidden floating error message">
+									<i class="close icon"></i>
+									<div class="header"><xsl:value-of select="/data/texts/error/*[name()=$lang]"/></div>
+									<p><xsl:value-of select="/data/texts/notfound/*[name()=$lang]"/></p>
+								</div>
 								<div class="row">
 									<img class="lazy" data-src="portrait.png" style="width: 250px; height: 250px;"/>
 								</div>
@@ -228,6 +233,24 @@
 											</xsl:choose>
 										</div>
 									</xsl:if>
+									<!-- Mobile TOC -->
+									<xsl:if test="not(links) and not(content) and groupBy">
+										<div class="mobile-toc mobile only ui labeled icon dropdown button">
+											<i class="dropdown icon"/>
+											<div class="text"><xsl:value-of select="/data/texts/jump/*[name()=$lang]"/></div>
+											<xsl:variable name="groupBy" select="groupBy"/>
+											<div class="menu">
+												<xsl:for-each select="/data/*[name()=$groupBy]/*">
+													<xsl:variable name="groupName" select="name/*[name()=$lang]"/>
+													<xsl:variable name="escapedGroupName" select="fn:encode-for-uri($groupName)"/>
+													<xsl:variable name="qualifiedGroupName" select="concat($escapedActivityName, concat('/', $escapedGroupName))"/>
+													<div class="item">
+														<a href="#{$qualifiedGroupName}"><xsl:value-of select="$groupName"/></a>
+													</div>
+												</xsl:for-each>
+											</div>
+										</div>
+									</xsl:if>
 								</div>
 							</xsl:for-each>
 						</xsl:for-each>
@@ -255,20 +278,25 @@
 									$.tab('change tab', "#");
 									$('a[href="#"]').addClass('active');
 									$('.mobile-navigation').dropdown('set selected', "#");
+									$('.notfound').addClass('hidden');
 								} else {
 									// Activity
 									var activityName = getActivityName(location.hash);
 									var oldActivityName = event &amp;&amp; event.oldURL &amp;&amp; event.oldURL.includes('#') ? getActivityName(event.oldURL.split('#')[1]) : "";
 									if (activityName != oldActivityName) {
 										var item = $(document.querySelectorAll('a[href="' + activityName + '"]'));
-										item.addClass('active');
-										$.tab('change tab', item.data('tab'));
-										$('.mobile-navigation').dropdown('set selected', activityName);
-										lazyLoad.update();
+										if (item.length > 0) {
+											item.addClass('active');
+											$.tab('change tab', item.data('tab'));
+											$('.mobile-navigation').dropdown('set selected', activityName);
+											lazyLoad.update();
+											// Content
+											var position = location.hash.includes('/') ? $(document.getElementById(location.hash.substring(1))).offset().top : 0;
+											$('html, body').scrollTop(position);
+										} else {
+											$('.notfound').removeClass('hidden');
+										}
 									}
-									// Content
-									var position = location.hash.includes('/') ? $(document.getElementById(location.hash.substring(1))).offset().top : 0;
-									$('html, body').scrollTop(position);
 								}
 							}
 							performNavigation();
@@ -277,11 +305,16 @@
 							$('.header').popup();
 							// Dropdowns
 							$('.ui.dropdown').dropdown();
+							$('.mobile-toc').dropdown({ action: 'hide' });
 							$('.mobile-navigation').dropdown({ direction : 'upward', action: 'hide' });
 							// Modals
 							$('.ui.modal').modal();
 							// Accordions
 							$('.ui.accordion').accordion();
+							// Messages
+							$('.message .close').on('click', function() {
+								$(this).closest('.message').transition('zoom');
+							});
 						});
 					</script>
 				</body>

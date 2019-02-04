@@ -13,6 +13,9 @@
 	<texts>
 		<title><hu>Harmath Dénes honlapja</hu><en>Homepage of Dénes Harmath</en></title>
 		<home><hu>Kezdőlap</hu><en>Home</en></home>
+		<error><hu>Hiba</hu><en>Error</en></error>
+		<notfound><hu>A keresett oldal nem található!</hu><en>The requested page is not found!</en></notfound>
+		<jump><hu>Ugrás</hu><en>Jump</en></jump>
 		<intro><hu>Szeretettel köszöntelek Harmath Dénes honlapján!</hu><en></en></intro>
 		<news><hu>Újdonságok</hu><en></en></news>
 		<download_score><hu>Kotta letöltése</hu><en>Download Score</en></download_score>
@@ -2685,10 +2688,10 @@ The first key entitled <tt class="key">Any</tt> has been expected by many users 
 			</instructions>
 		</dott>
 		<portal2>
-			<name><hu>Portal 2</hu><en>Portal 2</en></name>
+			<name><hu>Portal 2 pályák</hu><en>Portal 2 levels</en></name>
 			<description>
-				<hu>Törd a fejed az általam készített <a href="http://www.thinkwithportals.com/">Portal 2</a> pályák megoldásán!</hu>
-				<en>Challenge yourself with additional <a href="http://www.thinkwithportals.com/">Portal 2</a> levels!</en>
+				<hu>Törd a fejed az általam készített <a href="http://www.thinkwithportals.com/">Portal 2</a> tesztkamrák megoldásán!</hu>
+				<en>Challenge yourself with additional <a href="http://www.thinkwithportals.com/">Portal 2</a> test chambers!</en>
 			</description>
 			<url>https://steamcommunity.com/profiles/76561197994624033/myworkshopfiles/</url>
 			<image>portal2.jpg</image>
@@ -2721,12 +2724,12 @@ The first key entitled <tt class="key">Any</tt> has been expected by many users 
 			<access>key-rlpt7vdckhmxy7iyp72</access>
 		</toscanini_beethoven>
 		<via_crucis_esszé type="scribd">
-			<name><hu>Harmóniai stílusrétegződés Liszt Ferenc Via Crucis című művében - Esszé</hu></name>
+			<name><hu>Harmóniai stílusrétegződés Liszt Ferenc Via Crucis című művében - Esszé</hu></name>
 			<id>122475330</id>
 			<access>key-w3zvgng9yx7emt4hd4a</access>
 		</via_crucis_esszé>
 		<via_crucis_előadás type="slideshare">
-			<name><hu>Harmóniai stílusrétegződés Liszt Ferenc Via Crucis című művében - Előadás</hu></name>
+			<name><hu>Harmóniai stílusrétegződés Liszt Ferenc Via Crucis című művében - Előadás</hu></name>
 			<id>9LvthCMpF3ZjVZ</id>
 		</via_crucis_előadás>
 		<kosztolányi type="scribd">
@@ -2759,11 +2762,11 @@ The first key entitled <tt class="key">Any</tt> has been expected by many users 
 		<zene>
 			<name><hu>Zene</hu><en>Music</en></name>
 			<items>
-				<gondolatok/>
-				<k550-4/>
-				<toscanini_beethoven/>
 				<via_crucis_esszé/>
 				<via_crucis_előadás/>
+				<k550-4/>
+				<toscanini_beethoven/>
+				<gondolatok/>
 			</items>
 		</zene>
 		<képzőművészet>
