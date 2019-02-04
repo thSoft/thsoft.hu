@@ -92,6 +92,7 @@
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
+  -webkit-transform: translateZ(0); /* Workaround for Safari */
 }
 
 .mobile-toc .text {
