@@ -136,6 +136,9 @@
 									<a class="twitter-timeline" data-lang="hu" data-width="92%" href="https://twitter.com/ThsoftHu?ref_src=twsrc%5Etfw" data-chrome="noheader nofooter noborders">Betöltés...</a>
 									<script defer="defer" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 								</div>
+								<div class="row">
+									<a href="https://twitter.com/ThsoftHu?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-lang="hu" data-dnt="true" data-show-count="false">Feliratkozás</a><script defer="defer" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+								</div>
 							</div>
 						</div>
 						<!-- Activities -->
