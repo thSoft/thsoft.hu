@@ -291,7 +291,7 @@
 							<i class="dropdown icon"/>
 							<div class="text"><xsl:value-of select="/data/texts/jump/*[name()=$lang]"/></div>
 							<div class="menu">
-								<xsl:for-each select="items/*">
+								<xsl:for-each select="groups/*">
 									<xsl:variable name="groupName" select="name/*[name()=$lang]"/>
 									<xsl:variable name="escapedGroupName" select="fn:encode-for-uri($groupName)"/>
 									<xsl:variable name="qualifiedGroupName" select="concat($escapedMainContentName, concat('/', $escapedGroupName))"/>
