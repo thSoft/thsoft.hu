@@ -1259,35 +1259,6 @@ My flower, my flower.</en>
                      <items>
                         <composition>
                            <name>
-                              <hu>O vos omnes</hu>
-                              <en>O vos omnes</en>
-                           </name>
-                           <drive>1_FVnFhlKC9j6cTczF6tFp2J35fuS6bE1</drive>
-                           <landscape/>
-                           <inspiration>
-                              <hu>Eme nagyböjti motetta ajánlása azoknak szól, akiknek át kellett élniük szerettük elvesztését, különösképpen pedig azoknak, akiket nemrégiben ért ilyen csapás.</hu>
-                              <en>Dedicated to those who lost their beloved one, especially if they lived through it recently.</en>
-                           </inspiration>
-                           <lyrics>
-                              <hu>Ó, ti mindnyájan, akik átmentek az úton,
-figyeljetek ide és lássátok, van-e olyan fájdalom, mint az én fájdalmam.</hu>
-                              <en>O all ye who pass by the way,
-behold and see if there be any sorrow like unto my sorrow.</en>
-                           </lyrics>
-                           <created>2008-06-24</created>
-                           <release>
-                              <at>2008-06-30 23:30</at>
-                           </release>
-                           <release>
-                              <at>2012-07-03 10:58</at>
-                              <change>
-                                 <hu>Szebb tipográfia.</hu>
-                                 <en>Enhanced typesetting.</en>
-                              </change>
-                           </release>
-                        </composition>
-                        <composition>
-                           <name>
                               <hu>O salutaris hostia</hu>
                               <en>O salutaris hostia</en>
                            </name>
@@ -1377,6 +1348,35 @@ Amen.</en>
                            <created>2013-10-06</created>
                            <release>
                               <at>2013-10-06 16:18</at>
+                           </release>
+                        </composition>
+                        <composition>
+                           <name>
+                              <hu>O vos omnes</hu>
+                              <en>O vos omnes</en>
+                           </name>
+                           <drive>1_FVnFhlKC9j6cTczF6tFp2J35fuS6bE1</drive>
+                           <landscape/>
+                           <inspiration>
+                              <hu>Eme nagyböjti motetta ajánlása azoknak szól, akiknek át kellett élniük szerettük elvesztését, különösképpen pedig azoknak, akiket nemrégiben ért ilyen csapás.</hu>
+                              <en>Dedicated to those who lost their beloved one, especially if they lived through it recently.</en>
+                           </inspiration>
+                           <lyrics>
+                              <hu>Ó, ti mindnyájan, akik átmentek az úton,
+figyeljetek ide és lássátok, van-e olyan fájdalom, mint az én fájdalmam.</hu>
+                              <en>O all ye who pass by the way,
+behold and see if there be any sorrow like unto my sorrow.</en>
+                           </lyrics>
+                           <created>2008-06-24</created>
+                           <release>
+                              <at>2008-06-30 23:30</at>
+                           </release>
+                           <release>
+                              <at>2012-07-03 10:58</at>
+                              <change>
+                                 <hu>Szebb tipográfia.</hu>
+                                 <en>Enhanced typesetting.</en>
+                              </change>
                            </release>
                         </composition>
                      </items>
