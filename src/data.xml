@@ -548,6 +548,39 @@ Csicsijja uuuuuu!</hu>
                      <items>
                         <composition>
                            <name>
+                              <hu>Gustate et videte</hu>
+                              <en>Gustate et videte</en>
+                           </name>
+                           <drive>1oaEO-BvSraGO8-CbfdTtCLN3vNTG9oA-</drive>
+                           <inspiration>
+                              <hu>Communio Pünkösd utáni 8. vasárnapra.</hu>
+                              <en>Communion for the 8th Sunday after Pentecost.</en>
+                           </inspiration>
+                           <interpretation>
+                              <hu>Az énekszólamokat akár kórus, akár szólista énekelheti.</hu>
+                              <en>The voices can be sung either by choir or by soloists.</en>
+                           </interpretation>
+                           <lyrics>
+                              <hu>Ízleljétek és lássátok, hogy milyen édes az Úr,
+boldog az az ember, ki Őbenne bízik.</hu>
+                              <en>Taste and see that the Lord is sweet;
+blessed is the man who trusts in Him.</en>
+                           </lyrics>
+                           <video-performance>sBzsPSrZ3m4</video-performance>
+                           <created>2018-07-23</created>
+                           <release>
+                              <at>2018-07-23 9:30</at>
+                           </release>
+                           <release>
+                              <at>2018-07-24 11:11</at>
+                              <change>
+                                 <hu>Dinamikák hozzáadása.</hu>
+                                 <en>Added dynamics.</en>
+                              </change>
+                           </release>
+                        </composition>
+                        <composition>
+                           <name>
                               <hu>Vidimus stellam</hu>
                               <en>Vidimus stellam</en>
                            </name>
@@ -627,39 +660,6 @@ O clap your hands, all ye nations: shout unto God with the voice of joy.</en>
                            <created>2018-05-26</created>
                            <release>
                               <at>2018-05-26 23:23</at>
-                           </release>
-                        </composition>
-                        <composition>
-                           <name>
-                              <hu>Gustate et videte</hu>
-                              <en>Gustate et videte</en>
-                           </name>
-                           <drive>1oaEO-BvSraGO8-CbfdTtCLN3vNTG9oA-</drive>
-                           <inspiration>
-                              <hu>Communio Pünkösd utáni 8. vasárnapra.</hu>
-                              <en>Communion for the 8th Sunday after Pentecost.</en>
-                           </inspiration>
-                           <interpretation>
-                              <hu>Az énekszólamokat akár kórus, akár szólista énekelheti.</hu>
-                              <en>The voices can be sung either by choir or by soloists.</en>
-                           </interpretation>
-                           <lyrics>
-                              <hu>Ízleljétek és lássátok, hogy milyen édes az Úr,
-boldog az az ember, ki Őbenne bízik.</hu>
-                              <en>Taste and see that the Lord is sweet;
-blessed is the man who trusts in Him.</en>
-                           </lyrics>
-                           <video-performance>sBzsPSrZ3m4</video-performance>
-                           <created>2018-07-23</created>
-                           <release>
-                              <at>2018-07-23 9:30</at>
-                           </release>
-                           <release>
-                              <at>2018-07-24 11:11</at>
-                              <change>
-                                 <hu>Dinamikák hozzáadása.</hu>
-                                 <en>Added dynamics.</en>
-                              </change>
                            </release>
                         </composition>
                         <composition>
