@@ -1026,6 +1026,37 @@ kapcsolatunk makulátlan
                   </group>
                   <group>
                      <name>
+                        <hu>Dalok</hu>
+                        <en>Songs</en>
+                     </name>
+                     <items>
+                        <composition>
+                           <name>
+                              <hu>Szomorkodós vers</hu>
+                              <en>Sorrowful Poem</en>
+                           </name>
+                           <drive>1VJ-jlT-p8xY28WjX3fQAnsF1Gf2K5clx</drive>
+                           <lyrics>
+                              <hu>Hogyha lesz egy léghajóm,
+Felszállok az égre,
+Megkeresem egymagam,
+Hol a világ vége.
+
+Itt hagyom a bánatot,
+Itt hagyom a könnyet,
+Vissza bizony nem jövök
+Soha, soha többet.</hu>
+                           </lyrics>
+                           <created>2021-09-06</created>
+                           <release>
+                              <at>2021-09-06</at>
+                           </release>
+                           <video-performance>oRNaOqCRuJo</video-performance>
+                        </composition>
+                     </items>
+                  </group>
+                  <group>
+                     <name>
                         <hu>Kórusművek</hu>
                         <en>Choral works</en>
                      </name>
@@ -2137,6 +2168,7 @@ Nyissuk ki a lelkünk, vidám dalra keljünk: Mi Urunk mireánk vár.</hu>
                            <drive>1kvdF7NHULwowDyjKCk7WrX8ABFTs8Ebo</drive>
                            <landscape/>
                            <audio-performance>https://bandcamp.com/EmbeddedPlayer/album=10869383/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=914320989/transparent=true/</audio-performance>
+                           <video-performance>Xth4yRvAwo4</video-performance>
                            <inspiration>
                               <hu>A Szent István konzi pedagógusnapjára Záborszky igazgató úr egy bevezető fanfárt rendelt orgonára, a magyar Himnusz elé. Mivel nem sok alkalomhoz és hangnemhez passzoló darabot találtam az orgonairodalomban, úgy gondoltam, írok egy rövid, de velős orgonafanfárt. Ímhol az eredmény.</hu>
                               <en>An organ fanfare requested by the director of the St. Stephen conservatoire to be played before the Hungarian national anthem.</en>
@@ -2431,6 +2463,36 @@ Nyissuk ki a lelkünk, vidám dalra keljünk: Mi Urunk mireánk vár.</hu>
                            <created>2008-03-14</created>
                            <release>
                               <at>2008-03-14 15:43</at>
+                           </release>
+                        </composition>
+                     </items>
+                  </group>
+                  <group>
+                     <name>
+                        <hu>Könnyűzene</hu>
+                        <en>Pop songs</en>
+                     </name>
+                     <items>
+                        <composition>
+                           <name>
+                              <hu>Őrzők Alapítvány Szurkolódal</hu>
+                              <en>Őrzők Foundation Fan Song</en>
+                           </name>
+                           <video-performance>HEo_ihbB-qw</video-performance>
+                           <created>2017-04-06</created>
+                           <release>
+                              <at>2018-04-10</at>
+                           </release>
+                        </composition>
+                        <composition>
+                           <name>
+                              <hu>Fagypont alatt, hangsebesség felett</hu>
+                              <en>Subzero Temperature, Supersonic Velocity</en>
+                           </name>
+                           <video-performance>z5nIKcnruB8</video-performance>
+                           <created>2023-02-09</created>
+                           <release>
+                              <at>2023-02-09</at>
                            </release>
                         </composition>
                      </items>
