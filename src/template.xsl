@@ -392,13 +392,15 @@
 	<xsl:template match="composition">
 		<xsl:param name="lang" tunnel="yes"/>
 		<div class="ui centered grid">
-			<div class="row">
-				<a class="ui button" href="https://drive.google.com/uc?export=download&amp;id={drive}"><xsl:value-of select="/data/texts/download_score/*[name()=$lang]"/></a>
-			</div>
-			<div class="row">
-				<xsl:variable name="width"><xsl:choose><xsl:when test="landscape">59.4</xsl:when><xsl:otherwise>29.7</xsl:otherwise></xsl:choose></xsl:variable>
-				<iframe class="lazy" style="border: 0; width: {$width}em; height: 42em" data-src="https://drive.google.com/file/d/{drive}/preview"></iframe>
-			</div>
+			<xsl:if test="drive">
+				<div class="row">
+					<a class="ui button" href="https://drive.google.com/uc?export=download&amp;id={drive}"><xsl:value-of select="/data/texts/download_score/*[name()=$lang]"/></a>
+				</div>
+				<div class="row">
+					<xsl:variable name="width"><xsl:choose><xsl:when test="landscape">59.4</xsl:when><xsl:otherwise>29.7</xsl:otherwise></xsl:choose></xsl:variable>
+					<iframe class="lazy" style="border: 0; width: {$width}em; height: 42em" data-src="https://drive.google.com/file/d/{drive}/preview"></iframe>
+				</div>
+			</xsl:if>
 			<xsl:if test="video-performance">
 				<div class="row"><iframe class="lazy video" data-src="https://www.youtube.com/embed/{video-performance}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
 			</xsl:if>
