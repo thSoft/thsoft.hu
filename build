@@ -1,4 +1,5 @@
 echo "Building..."
+cd "$(dirname "$0")"
 OUTPUT=www
 rm -rf $OUTPUT
 mkdir $OUTPUT
