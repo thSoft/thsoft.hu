@@ -305,7 +305,7 @@ is now, and ever shall be, world without end. Amen.</en>
                               <hu>A szövegben szereplő <em>N.</em> bejegyzéseket értelemszerűen az adott intézményre vonatkozó nevekkel kell behelyettesíteni, amelynek hallgatói a művet előadják.</hu>
                               <en>The references of <em>N.</em> in the lyrics are to be substituted with names in connection with the institute whose students perform the work.</en>
                            </interpretation>
-                           <video-performance>TX8175lwC0k</video-performance>
+                           <video-performance>pgacsayKko8</video-performance>
                            <created>2007-11</created>
                            <release>
                               <at>2009-10-20 23:53</at>
@@ -2218,6 +2218,17 @@ Nyissuk ki a lelkünk, vidám dalra keljünk: Mi Urunk mireánk vár.</hu>
                                  <hu>Hangsúlytalan előkék javítása.</hu>
                                  <en>Fix missing acciaccaturas.</en>
                               </change>
+                           </release>
+                        </composition>
+                        <composition>
+                           <name>
+                              <hu>Intrada Festiva</hu>
+                              <en>Intrada Festiva</en>
+                           </name>
+                           <drive>1QqgEKIvB-prpPEUsb27MH6LlqgmoP86x</drive>
+                           <created>2022-03-30</created>
+                           <release>
+                              <at>2023-05-10</at>
                            </release>
                         </composition>
                      </items>
