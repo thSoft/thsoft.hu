@@ -340,11 +340,11 @@
 						</div>
 					</div>
 					<xsl:if test="instructions">
-						<div class="ui bottom attached button" onclick="$('#{name()}').modal('show')">
+						<div class="ui bottom attached button" onclick="$('#{id}').modal('show')">
 							<i class="help icon"></i>
 							<xsl:value-of select="/data/texts/instructions/*[name()=$lang]"/>
 						</div>
-						<div id="{name()}" class="ui modal">
+						<div id="{id}" class="ui modal">
 							<i class="close icon"></i>
 							<xsl:copy-of select="instructions/node()"/>
 						</div>
@@ -403,6 +403,9 @@
 			</xsl:if>
 			<xsl:if test="video-performance">
 				<div class="row"><iframe class="lazy video" data-src="https://www.youtube.com/embed/{video-performance}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
+			</xsl:if>
+			<xsl:if test="video-performance-playlist">
+				<div class="row"><iframe class="lazy video" data-src="https://www.youtube.com/embed/videoseries?list={video-performance-playlist}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></div>
 			</xsl:if>
 			<xsl:if test="audio-performance">
 				<div class="row"><iframe class="lazy" style="border: 0; width: 100%; height: 120px;" data-src="{audio-performance}" seamless="seamless"></iframe></div>

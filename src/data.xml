@@ -888,190 +888,6 @@ and the King of glory shall come in.</en>
                   </group>
                   <group>
                      <name>
-                        <hu>Arany bitek</hu>
-                        <en>Golden Bits</en>
-                     </name>
-                     <items>
-                        <composition>
-                           <name>
-                              <hu>Picipuha ablakok</hu>
-                              <en>Tinytender Windows</en>
-                           </name>
-                           <drive>1G9Kf_pHhen3uVRUKyrX1GjvGybSDKK2w</drive>
-                           <video-performance>A_gIor9LNMM</video-performance>
-                           <audio-performance>https://bandcamp.com/EmbeddedPlayer/album=4079299337/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=1067351052/transparent=true/</audio-performance>
-                           <analysis>
-                              <hu>Ez a kis epigramma azokat az érzéseket próbálja elénk tárni, amit a kedves delikvens akkor érez, amikor mindannyiunk kedvenc oprendszere ismét fagypont alatti állapotba kerül.</hu>
-                              <en>An epigram depicting the feelings of an everyday user seeing our favourite operating system crashing.</en>
-                           </analysis>
-                           <lyrics>
-                              <hu>Picipuha ablakok szállnak az éjben...
-Mire kattintanék, lefagynak serényen.</hu>
-                           </lyrics>
-                           <created>2005-04</created>
-                           <release>
-                              <at>2005-04-15</at>
-                           </release>
-                           <release>
-                              <at>2008-01-26</at>
-                              <change>
-                                 <hu>Szebb tipográfia, korrekciók.</hu>
-                                 <en>Enhanced typesetting, corrections.</en>
-                              </change>
-                           </release>
-                           <release>
-                              <at>2010-03-09 20:50</at>
-                              <change>
-                                 <hu>Sajtóhiba javítása, módosítójel egyértelműsítés.</hu>
-                                 <en>Corrected typo, disambiguated accidental.</en>
-                              </change>
-                           </release>
-                           <release>
-                              <at>2023-03-11</at>
-                              <change>
-                                 <hu>Előadás hozzáadva.</hu>
-                                 <en>Added performance.</en>
-                              </change>
-                           </release>
-                           <lang>
-                              <hu/>
-                           </lang>
-                        </composition>
-                        <composition>
-                           <name>
-                              <hu>Fatal Exception</hu>
-                              <en>Fatal Exception</en>
-                           </name>
-                           <drive>19vbiRcAP8vOkoL8hycI4Lblsgw5VRpCM</drive>
-                           <video-performance>A_gIor9LNMM?start=57</video-performance>
-                           <audio-performance>https://bandcamp.com/EmbeddedPlayer/album=4079299337/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=2458315547/transparent=true/</audio-performance>
-                           <analysis>
-                              <hu>A lírai én nem más, mint egy coder, akinek belső vívódását, az analóg és a digitális világ örök harcát élhetjük át a dal hallgatása közben.</hu>
-                              <en>This song is about a coder who struggles between his analog and digital self... Who will win?</en>
-                           </analysis>
-                           <lyrics>
-                              <hu>Gyönyörűszép májusnak
-napfényes havában
-programoztam javában,
-mégpedig Javában!
-
-Lenge szellő fújdogált,
-pillangók röpködtek,
-amíg én a <code>public class
-MyApp</code>-ot pötyögtem.
-
-Virágzott az almafa,
-kismadár csiripelt -
-s ez generált bennem egy
-végzetes kivételt:
-
-Sóhajtottam, és már nem
-érdekelt az applet;
-leszedtem egy almát, s ki-
-kapcsoltam az Apple-t...</hu>
-                           </lyrics>
-                           <created>2006-03</created>
-                           <release>
-                              <at>2006-04-03</at>
-                           </release>
-                           <release>
-                              <at>2008-01-26</at>
-                              <change>
-                                 <hu>Szebb tipográfia, korrekciók.</hu>
-                                 <en>Enhanced typesetting, corrections.</en>
-                              </change>
-                           </release>
-                           <release>
-                              <at>2010-03-09 21:28</at>
-                              <change>
-                                 <hu>Apró szépítések.</hu>
-                                 <en>Minor enhancements.</en>
-                              </change>
-                           </release>
-                           <release>
-                              <at>2023-03-11</at>
-                              <change>
-                                 <hu>Előadás hozzáadva.</hu>
-                                 <en>Added performance.</en>
-                              </change>
-                           </release>
-                           <lang>
-                              <hu/>
-                           </lang>
-                        </composition>
-                        <composition>
-                           <name>
-                              <hu>Interneten, Interneten...</hu>
-                              <en>The World Wide Web...</en>
-                           </name>
-                           <drive>1KLmK0kUHOLeUdEJZkoljV--nsDNjfQiF</drive>
-                           <video-performance>A_gIor9LNMM?start=173</video-performance>
-                           <audio-performance>https://bandcamp.com/EmbeddedPlayer/album=4079299337/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=69983132/transparent=true/</audio-performance>
-                           <analysis>
-                              <hu>Egy autentikusch, legújabb stílusú magyar népdal feldolgozása, melyben a nép embere megkapóan egyszerű igazságokkal érzékelteti kedvese iránt érzett szerelmét.</hu>
-                              <en>A folk song in which the beloved one is flooded by the most flattering compliments.</en>
-                           </analysis>
-                           <lyrics>
-                              <hu>Interneten, Interneten
-jaj, de sok a weblap!
-Az én babám, az én babám
-hazafelé ballag.
-Szeretlek én, rózsám,
-a webnél is jobban,
-úgyhogy meg is írom eztet
-most gyorsan egy blogban.
-
-Interneten sok a vírus
-és a programféreg,
-édes rózsám, én tetéged
-csakis arra kérlek:
-húzz föl egy tűzfalat,
-mert ha jön egy faló,
-megfertőz, és akkor az nem
-lesz kedvemre való.
-
-Az én babám lelke olyan,
-akár az Internet:
-nem tudni, a következő
-link vajon mit rejthet.
-Ezért szeretem őt,
-és ez mindig így lesz,
-kapcsolatunk makulátlan
-és száz megabites!</hu>
-                           </lyrics>
-                           <created>2006-03</created>
-                           <release>
-                              <at>2006-04-03</at>
-                           </release>
-                           <release>
-                              <at>2008-01-26</at>
-                              <change>
-                                 <hu>Szebb tipográfia, korrekciók.</hu>
-                                 <en>Enhanced typesetting, corrections.</en>
-                              </change>
-                           </release>
-                           <release>
-                              <at>2010-03-09 21:51</at>
-                              <change>
-                                 <hu>Egy fontos szeptimhang és oktávozás pótlása.</hu>
-                                 <en>Added an important seventh note and octave coupling.</en>
-                              </change>
-                           </release>
-                           <release>
-                              <at>2023-03-11</at>
-                              <change>
-                                 <hu>Előadás hozzáadva.</hu>
-                                 <en>Added performance.</en>
-                              </change>
-                           </release>
-                           <lang>
-                              <hu/>
-                           </lang>
-                        </composition>
-                     </items>
-                  </group>
-                  <group>
-                     <name>
                         <hu>Dalok</hu>
                         <en>Songs</en>
                      </name>
@@ -1098,6 +914,102 @@ Soha, soha többet.</hu>
                               <at>2021-09-06</at>
                            </release>
                            <video-performance>oRNaOqCRuJo</video-performance>
+                        </composition>
+                        <composition>
+                           <name>
+                              <hu>Furulyaszó</hu>
+                              <en>Flute Tune</en>
+                           </name>
+                           <lyrics>
+                              <hu>Cinke ül az ágon,
+Neki furulyázom,
+Picike barátom
+Hallgatja.
+
+Tizet üt az óra,
+Térjünk nyugovóra,
+Hívogatom őt az
+Ablakba.
+
+Megvetem az ágyát,
+Vigyázom az álmát,
+Dalom a madárkát
+Altatja.
+
+Búcsúzik a kedves,
+Szárnyaival verdes,
+Elröpül a csendes
+Hajnalba.</hu>
+                           </lyrics>
+                           <created>2023-08-11</created>
+                           <release>
+                              <at>2023-08-11</at>
+                           </release>
+                           <video-performance>T2vZ7_4Lqzg</video-performance>
+                        </composition>
+                        <composition>
+                           <name>
+                              <hu>Arany bitek</hu>
+                              <en>Golden Bits</en>
+                           </name>
+                           <drive>1wwtR_OuBMQ_KTgNiFhLH2X6DUMPuERVg</drive>
+                           <lyrics>
+                              <hu>Picipuha ablakok szállnak az éjben...
+Mire kattintanék, lefagynak serényen.
+
+Gyönyörűszép májusnak
+napfényes havában
+programoztam javában,
+mégpedig Javában!
+
+Lenge szellő fújdogált,
+pillangók röpködtek,
+amíg én a <code>public class
+MyApp</code>-ot pötyögtem.
+
+Virágzott az almafa,
+kismadár csiripelt -
+s ez generált bennem egy
+végzetes kivételt:
+
+Sóhajtottam, és már nem
+érdekelt az applet;
+leszedtem egy almát, s ki-
+kapcsoltam az Apple-t...
+
+Interneten, Interneten
+jaj, de sok a weblap!
+Az én babám, az én babám
+hazafelé ballag.
+Szeretlek én, rózsám,
+a webnél is jobban,
+úgyhogy meg is írom eztet
+most gyorsan egy blogban.
+
+Interneten sok a vírus
+és a programféreg,
+édes rózsám, én tetéged
+csakis arra kérlek:
+húzz föl egy tűzfalat,
+mert ha jön egy faló,
+megfertőz, és akkor az nem
+lesz kedvemre való.
+
+Az én babám lelke olyan,
+akár az Internet:
+nem tudni, a következő
+link vajon mit rejthet.
+Ezért szeretem őt,
+és ez mindig így lesz,
+kapcsolatunk makulátlan
+és száz megabites!</hu>
+                           </lyrics>
+                           <created>2006-03-01</created>
+                           <release>
+                              <at>2023-03-11</at>
+                           </release>
+                           <video-performance>A_gIor9LNMM</video-performance>
+                           <audio-performance>https://bandcamp.com/EmbeddedPlayer/album=4079299337/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=true/artwork=small/transparent=true/</audio-performance>
                         </composition>
                      </items>
                   </group>
@@ -1737,6 +1649,18 @@ behold and see if there be any sorrow like unto my sorrow.</en>
                                  <hu>Különböző hangszerelések.</hu>
                                  <en>Added various arrangements.</en>
                               </change>
+                           </release>
+                        </composition>
+                        <composition>
+                           <name>
+                              <hu>Missa XI "Orbis factor"</hu>
+                              <en>Missa XI "Orbis factor"</en>
+                           </name>
+                           <drive>1VPWIDuL1LCnT1-HCclxo8hN1yhtRMD0Z</drive>
+                           <video-performance-playlist>PLDrg2ayMaZy7Vjs9mDQF8XhNAD5LCTCGj</video-performance-playlist>
+                           <created>2023-04-25</created>
+                           <release>
+                              <at>2023-04-25 13</at>
                            </release>
                         </composition>
                         <composition>
@@ -2906,7 +2830,7 @@ Hogy csinálod ezt?
                               <hu>Édesanyám - harmonizáció Kodály stílusában</hu>
                               <en>My Dear Mother - but it's harmonized in the style of Kodály</en>
                            </name>
-                           <id>dLEpkKVtEo8</id>
+                           <id>RnDWsR6Rjj0</id>
                         </youtube>
                         <gallery>
                            <name>
@@ -4128,6 +4052,7 @@ The first key entitled <tt class="key">Any</tt> has been expected by many users 
                <icon>gamepad</icon>
                <cards>
                   <card>
+                     <id>froggy</id>
                      <name>
                         <hu>Brekkencs</hu>
                         <en>Froggy</en>
@@ -4140,6 +4065,7 @@ The first key entitled <tt class="key">Any</tt> has been expected by many users 
                      <image>froggy.png</image>
                   </card>
                   <card>
+                     <id>jota</id>
                      <name>
                         <hu>Java Online Tarokk</hu>
                         <en>Java Online Tarot</en>
@@ -4161,6 +4087,7 @@ The first key entitled <tt class="key">Any</tt> has been expected by many users 
                      </instructions>
                   </card>
                   <card>
+                     <id>dott</id>
                      <name>
                         <hu>A Csáp Napja</hu>
                         <en>Day of the Tentacle</en>
@@ -4184,6 +4111,7 @@ The first key entitled <tt class="key">Any</tt> has been expected by many users 
                      </instructions>
                   </card>
                   <card>
+                     <id>portal2</id>
                      <name>
                         <hu>Portal 2 pályák</hu>
                         <en>Portal 2 levels</en>
