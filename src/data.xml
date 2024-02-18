@@ -2933,13 +2933,13 @@ Hogy csinálod ezt?
                         <en>Music</en>
                      </name>
                      <items>
-                        <youtube>
+                        <youtube-playlist>
                            <name>
-                              <hu>Boldogság, gyere haza - újraharmonizálva</hu>
-                              <en>Happiness, Please Come Home - Reharmonized</en>
+                              <hu>Zenei poénok</hu>
+                              <en>Musical Fun</en>
                            </name>
-                           <id>QIptYgLIHj4</id>
-                        </youtube>
+                           <id>PLDrg2ayMaZy7Eeri_OOc0MhT1kPg_HTAL</id>
+                        </youtube-playlist>
                         <vimeo>
                            <name>
                               <hu>Szerelem első vérig - újraharmonizálva</hu>
@@ -2947,20 +2947,6 @@ Hogy csinálod ezt?
                            </name>
                            <id>286490988</id>
                         </vimeo>
-                        <youtube>
-                           <name>
-                              <hu>Petróleumlámpa - újraharmonizálva</hu>
-                              <en>Petroleum Lamp - Reharmonized</en>
-                           </name>
-                           <id>sZ13vNxKtg8</id>
-                        </youtube>
-                        <youtube-playlist>
-                           <name>
-                              <hu>Mashupok</hu>
-                              <en>Mashups</en>
-                           </name>
-                           <id>PLDrg2ayMaZy4Jkj48suyBvzzj1mTbRM9j</id>
-                        </youtube-playlist>
                         <gallery>
                            <name>
                               <hu>Zenei mémek</hu>
