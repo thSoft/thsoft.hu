@@ -149,7 +149,7 @@
                      <div class="ui centered grid">
                         <div class="row">
                            <iframe class="lazy"
-                                   data-src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=480&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=qkgdmfh2ptn60vrc6q0hkaeur4%40group.calendar.google.com&amp;color=%23691426&amp;ctz=Europe%2FBudapest"
+                                   data-src="https://calendar.google.com/calendar/embed?height=480&amp;wkst=2&amp;ctz=Europe%2FBudapest&amp;bgcolor=%23ffffff&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;src=cWtnZG1maDJwdG42MHZyYzZxMGhrYWV1cjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23E67C73"
                                    style="border-width: 0; max-width: 100%;"
                                    width="640"
                                    height="480"
